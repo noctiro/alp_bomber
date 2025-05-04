@@ -119,7 +119,7 @@ jobs:
       - name: Organize artifacts
         run: |
           mkdir -p dist
-          find artifacts -type f \( -name "*.zip" -o -name "*.tar.gz" \) -exec cp {} dist/ \;
+          find artifacts -type f \( -name "*.zip" -o -name "*.tar.gz" -o -name "*.exe" \) -exec cp {} dist/ \;
           find artifacts -type f -name "*.sha256" -exec cp {} dist/ \;
           cd dist
           echo "# SHA256 Checksums" > SHA256SUMS
